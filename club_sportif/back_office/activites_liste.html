@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des activités - BackOffice</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../FrontOffice/index.html" class="navbar__brand" id="logo">
+                <img src="../assets/img/logo.png" alt="Club Sportif - Accueil">
+            </a>
+            <nav class="navbar__links">
+                <a href="../FrontOffice/index.html">Retour au site</a>
+            </nav>
+        </div>
+    </header>
+    <div class="backoffice-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">BackOffice</div>
+            <ul class="sidebar-nav">
+                <li><a href="activites-liste.html" class="active">Activités</a></li>
+                <li><a href="activite-form.html">Nouvelle activité</a></li>
+                <li><a href="adherents-liste.html">Adhérents</a></li>
+                <li><a href="adherent-form.html">Nouvel adhérent</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h1>Gestion des activités sportives</h1>
+            <p>Consultez, ajoutez, modifiez ou supprimez les activités proposées par le club sportif.</p>
+            <div class="form-actions">
+                <a href="activite-form.html" class="btn" id="btn-ajouter-activite">+ Ajouter une activité</a>
+            </div>
+            <div class="table-responsive">
+                <table class="table-liste" id="table-activites">
+                    <thead>
+                        <tr>
+                            <th>Identifiant</th><th>Nom de l'activité</th><th>Catégorie</th><th>Jour</th>
+                            <th>Horaire</th><th>Prix mensuel</th><th>Places</th><th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                <tr>
+                                    <td>ACT001</td><td>Musculation</td><td>Fitness</td><td>Lundi</td><td>10:00 - 12:00</td><td>80 DT</td><td>20</td>
+                                    <td>
+                                        <a href="activite-detail.html">Détails</a> |
+                                        <a href="activite-form.html">Modifier</a> |
+                                        <button type="button">Supprimer</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ACT002</td><td>Yoga</td><td>Bien-être</td><td>Mardi</td><td>14:00 - 15:30</td><td>60 DT</td><td>15</td>
+                                    <td>
+                                        <a href="activite-detail.html">Détails</a> |
+                                        <a href="activite-form.html">Modifier</a> |
+                                        <button type="button">Supprimer</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ACT003</td><td>Natation</td><td>Sport aquatique</td><td>Mercredi</td><td>16:00 - 18:00</td><td>100 DT</td><td>25</td>
+                                    <td>
+                                        <a href="activite-detail.html">Détails</a> |
+                                        <a href="activite-form.html">Modifier</a> |
+                                        <button type="button">Supprimer</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ACT004</td><td>Fitness</td><td>Cardio</td><td>Jeudi</td><td>09:00 - 10:30</td><td>70 DT</td><td>18</td>
+                                    <td>
+                                        <a href="activite-detail.html">Détails</a> |
+                                        <a href="activite-form.html">Modifier</a> |
+                                        <button type="button">Supprimer</button>
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Club Sportif - BackOffice - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

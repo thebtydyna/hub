@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail de l'adhérent - BackOffice</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../FrontOffice/index.html" class="navbar__brand" id="logo">
+                <img src="../assets/img/logo.png" alt="Club Sportif - Accueil">
+            </a>
+            <nav class="navbar__links">
+                <a href="../FrontOffice/index.html">Retour au site</a>
+            </nav>
+        </div>
+    </header>
+    <div class="backoffice-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">BackOffice</div>
+            <ul class="sidebar-nav">
+                <li><a href="activites-liste.html">Activités</a></li>
+                <li><a href="activite-form.html">Nouvelle activité</a></li>
+                <li><a href="adherents-liste.html" class="active">Adhérents</a></li>
+                <li><a href="adherent-form.html">Nouvel adhérent</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h1>Détail de l'adhérent</h1>
+            <section class="detail-card" id="infos-adherent">
+                <h2>Informations personnelles</h2>
+                <p><strong>Identifiant :</strong> <span>ADH001</span></p>
+                <p><strong>Nom :</strong> <span>Ben Ali</span></p>
+                <p><strong>Prénom :</strong> <span>Ahmed</span></p>
+                <p><strong>Date de naissance :</strong> <span>12/03/2000</span></p>
+                <p><strong>Âge :</strong> <span>26 ans</span></p>
+                <p><strong>Sexe :</strong> <span>Homme</span></p>
+                <p><strong>Poids :</strong> <span>75 kg</span></p>
+                <p><strong>Téléphone :</strong> <span>22 754 398</span></p>
+                <p><strong>Email :</strong> <span>ahmed@example.com</span></p>
+                <p><strong>Adresse :</strong> <span>Tunis, Tunisie</span></p>
+                <p><strong>Date d'inscription :</strong> <span>05/09/2026</span></p>
+            </section>
+            <section class="detail-card" id="activites-adherent">
+                <h2>Activités de l'adhérent</h2>
+                <div class="table-responsive">
+                    <table class="table-inscrits" id="table-activites-adherent">
+                        <thead>
+                            <tr><th>Identifiant</th><th>Activité</th><th>Jour</th><th>Horaire</th><th>Prix mensuel</th><th>Statut</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ACT001</td><td>Musculation</td><td>Lundi</td><td>10:00 - 12:00</td><td>80 DT</td>
+                                <td><span class="badge badge-paye">Payé</span></td>
+                            </tr>
+                            <tr>
+                                <td>ACT003</td><td>Natation</td><td>Mercredi</td><td>16:00 - 18:00</td><td>100 DT</td>
+                                <td><span class="badge badge-attente">En attente</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <div class="form-actions">
+                <a href="adherent-form.html" class="btn btn-primary">Modifier l'adhérent</a>
+                <a href="adherents-liste.html" class="btn btn-secondary">Retour à la liste</a>
+                <button type="button" class="btn btn-secondary" id="btn-supprimer-adherent">Supprimer l'adhérent</button>
+            </div>
+        </main>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Club Sportif - BackOffice - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

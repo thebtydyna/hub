@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des adhérents - BackOffice</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../FrontOffice/index.html" class="navbar__brand" id="logo">
+                <img src="../assets/img/logo.png" alt="Club Sportif - Accueil">
+            </a>
+            <nav class="navbar__links">
+                <a href="../FrontOffice/index.html">Retour au site</a>
+            </nav>
+        </div>
+    </header>
+    <div class="backoffice-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">BackOffice</div>
+            <ul class="sidebar-nav">
+                <li><a href="activites-liste.html">Activités</a></li>
+                <li><a href="activite-form.html">Nouvelle activité</a></li>
+                <li><a href="adherents-liste.html" class="active">Adhérents</a></li>
+                <li><a href="adherent-form.html">Nouvel adhérent</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h1>Liste des adhérents</h1>
+            <div class="form-actions">
+                <a href="adherent-form.html" class="btn" id="btn-ajouter-adherent">+ Ajouter un adhérent</a>
+            </div>
+            <input type="search" id="recherche" name="recherche" placeholder="Rechercher un adhérent..." aria-label="Rechercher un adhérent">
+            <div class="table-responsive">
+                <table class="table-liste" id="table-adherents">
+                    <thead>
+                        <tr><th>Identifiant</th><th>Nom</th><th>Prénom</th><th>Téléphone</th><th>Actions</th></tr>
+                    </thead>
+                    <tbody>
+                                <tr>
+                                    <td>ADH001</td><td>Ben Ali</td><td>Ahmed</td><td>22 754 398</td>
+                                    <td>
+                                        <a href="adherent-detail.html">Détails</a> |
+                                        <a href="adherent-form.html">Modifier</a> |
+                                        <button type="button">Supprimer</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ADH002</td><td>Trabelsi</td><td>Mariem</td><td>23 965 123</td>
+                                    <td>
+                                        <a href="adherent-detail.html">Détails</a> |
+                                        <a href="adherent-form.html">Modifier</a> |
+                                        <button type="button">Supprimer</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ADH003</td><td>Mansouri</td><td>Yassine</td><td>95 786 001</td>
+                                    <td>
+                                        <a href="adherent-detail.html">Détails</a> |
+                                        <a href="adherent-form.html">Modifier</a> |
+                                        <button type="button">Supprimer</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ADH004</td><td>Khalfi</td><td>Roua</td><td>96 235 178</td>
+                                    <td>
+                                        <a href="adherent-detail.html">Détails</a> |
+                                        <a href="adherent-form.html">Modifier</a> |
+                                        <button type="button">Supprimer</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ADH005</td><td>Kalboussi</td><td>Fatma</td><td>25 893 330</td>
+                                    <td>
+                                        <a href="adherent-detail.html">Détails</a> |
+                                        <a href="adherent-form.html">Modifier</a> |
+                                        <button type="button">Supprimer</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ADH006</td><td>Zerguich</td><td>Mohamed</td><td>40 520 002</td>
+                                    <td>
+                                        <a href="adherent-detail.html">Détails</a> |
+                                        <a href="adherent-form.html">Modifier</a> |
+                                        <button type="button">Supprimer</button>
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Club Sportif - BackOffice - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

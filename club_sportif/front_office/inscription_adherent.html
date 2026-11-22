@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription à une activité - Club Sportif</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__brand" id="logo">
+                <img src="../assets/img/logo.png" alt="Club Sportif - Accueil">
+            </a>
+            <nav class="navbar__links">
+            <a href="index.html">Accueil</a>
+            <a href="activites-liste.html">Nos activités</a>
+            <a href="inscription-adherent.html" class="active">Inscription</a>
+            <a href="../BackOffice/activites-liste.html">Administration</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h1>Inscription à une activité</h1>
+        <form class="form-card" id="form-inscription" action="#" method="post">
+            <div class="form-row">
+                <div>
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" required minlength="2" maxlength="30"
+                           pattern="[A-Za-zÀ-ÿ \-]+" title="Lettres, espaces et tirets uniquement (2 à 30 caractères)" placeholder="Ben Ali">
+                </div>
+                <div>
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" required minlength="2" maxlength="30"
+                           pattern="[A-Za-zÀ-ÿ \-]+" title="Lettres, espaces et tirets uniquement (2 à 30 caractères)" placeholder="Ahmed">
+                </div>
+            </div>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required maxlength="255" placeholder="exemple@email.com">
+
+            <label for="activite">Activité souhaitée</label>
+            <select id="activite" name="activite" required>
+                <option value="">Sélectionner une activité</option>
+                <option value="Football">Football</option>
+                <option value="Natation">Natation</option>
+                <option value="Fitness">Fitness</option>
+                <option value="Musculation">Musculation</option>
+                <option value="Yoga">Yoga</option>
+            </select>
+
+            <div class="form-row">
+                <div>
+                    <label for="duree">Durée</label>
+                    <select id="duree" name="duree" required>
+                        <option value="">Choisir une durée</option>
+                        <option value="1">1 mois</option>
+                        <option value="3">3 mois</option>
+                        <option value="6">6 mois</option>
+                        <option value="12">12 mois</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="tarif">Tarif</label>
+                    <input type="text" id="tarif" name="tarif" readonly placeholder="Calculé automatiquement">
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary" id="btn-inscrire">S'inscrire</button>
+                <a href="activites-liste.html" class="btn btn-secondary">Annuler</a>
+            </div>
+        </form>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <nav class="footer-links">
+                <a href="index.html">Accueil</a>
+                <a href="activites-liste.html">Activités</a>
+                <a href="inscription-adherent.html">Inscription</a>
+            </nav>
+            <div class="footer-contact">
+                <p>Tunis, Tunisie</p>
+                <p>Téléphone : +216 70 000 000</p>
+                <p>Email : contact@clubsportif.tn</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Club Sportif - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

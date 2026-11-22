@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire adhérent - BackOffice</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../FrontOffice/index.html" class="navbar__brand" id="logo">
+                <img src="../assets/img/logo.png" alt="Club Sportif - Accueil">
+            </a>
+            <nav class="navbar__links">
+                <a href="../FrontOffice/index.html">Retour au site</a>
+            </nav>
+        </div>
+    </header>
+    <div class="backoffice-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">BackOffice</div>
+            <ul class="sidebar-nav">
+                <li><a href="activites-liste.html">Activités</a></li>
+                <li><a href="activite-form.html">Nouvelle activité</a></li>
+                <li><a href="adherents-liste.html">Adhérents</a></li>
+                <li><a href="adherent-form.html" class="active">Nouvel adhérent</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h1>Formulaire adhérent</h1>
+            <form class="form-card" id="form-adherent" action="#" method="post">
+                <div class="form-row">
+                    <div>
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" required minlength="2" maxlength="30"
+                               pattern="[A-Za-zÀ-ÿ \-]+" title="Lettres, espaces et tirets uniquement (2 à 30 caractères)">
+                    </div>
+                    <div>
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" required minlength="2" maxlength="30"
+                               pattern="[A-Za-zÀ-ÿ \-]+" title="Lettres, espaces et tirets uniquement (2 à 30 caractères)">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required maxlength="255">
+                    </div>
+                    <div>
+                        <label for="telephone">Téléphone</label>
+                        <input type="tel" id="telephone" name="telephone" required
+                               pattern="[0-9]{8,15}" title="Uniquement des chiffres (8 à 15 chiffres)">
+                    </div>
+                </div>
+
+                <label for="activite">Activité</label>
+                <select id="activite" name="activite" required>
+                    <option value="">Sélectionner une activité</option>
+                    <option value="Football">Football</option>
+                    <option value="Natation">Natation</option>
+                    <option value="Fitness">Fitness</option>
+                    <option value="Musculation">Musculation</option>
+                    <option value="Yoga">Yoga</option>
+                </select>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="btn-enregistrer">Enregistrer</button>
+                    <a href="adherents-liste.html" class="btn btn-secondary">Annuler</a>
+                </div>
+            </form>
+        </main>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Club Sportif - BackOffice - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

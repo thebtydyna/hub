@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail de l'activité - BackOffice</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../FrontOffice/index.html" class="navbar__brand" id="logo">
+                <img src="../assets/img/logo.png" alt="Club Sportif - Accueil">
+            </a>
+            <nav class="navbar__links">
+                <a href="../FrontOffice/index.html">Retour au site</a>
+            </nav>
+        </div>
+    </header>
+    <div class="backoffice-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">BackOffice</div>
+            <ul class="sidebar-nav">
+                <li><a href="activites-liste.html" class="active">Activités</a></li>
+                <li><a href="activite-form.html">Nouvelle activité</a></li>
+                <li><a href="adherents-liste.html">Adhérents</a></li>
+                <li><a href="adherent-form.html">Nouvel adhérent</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h1>Détail de l'activité</h1>
+            <section class="detail-card" id="infos-activite">
+                <h2>Informations générales</h2>
+                <p><strong>Identifiant :</strong> <span>ACT001</span></p>
+                <p><strong>Nom de l'activité :</strong> <span>Musculation</span></p>
+                <p><strong>Catégorie :</strong> <span>Fitness</span></p>
+                <p><strong>Description :</strong> <span>Activité destinée à améliorer la force physique et à développer les muscles.</span></p>
+                <p><strong>Jour :</strong> <span>Lundi</span></p>
+                <p><strong>Horaire :</strong> <span>10:00 - 12:00</span></p>
+                <p><strong>Prix mensuel :</strong> <span>80 DT</span></p>
+                <p><strong>Nombre de places :</strong> <span>20</span></p>
+            </section>
+            <section class="detail-card" id="adherents-inscrits">
+                <h2>Liste des adhérents inscrits</h2>
+                <div class="table-responsive">
+                    <table class="table-inscrits" id="table-inscrits">
+                        <thead>
+                            <tr><th>Identifiant</th><th>Nom</th><th>Prénom</th><th>Email</th><th>Téléphone</th><th>Action</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ADH001</td><td>Ben Ali</td><td>Ahmed</td><td>ahmed@example.com</td><td>22123456</td>
+                                <td><a href="adherent-detail.html">Détails</a></td>
+                            </tr>
+                            <tr>
+                                <td>ADH002</td><td>Trabelsi</td><td>Amira</td><td>amira@example.com</td><td>98123456</td>
+                                <td><a href="adherent-detail.html">Détails</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <div class="form-actions">
+                <a href="activite-form.html" class="btn btn-primary">Modifier l'activité</a>
+                <a href="activites-liste.html" class="btn btn-secondary">Retour à la liste</a>
+                <button type="button" class="btn btn-secondary" id="btn-supprimer-activite">Supprimer l'activité</button>
+            </div>
+        </main>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Club Sportif - BackOffice - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

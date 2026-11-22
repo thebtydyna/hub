@@ -1,0 +1,172 @@
+
+
+:root {
+  --color-primary: #0B5ED7;
+  --color-primary-dark: #094DB8;
+  --color-navy: #0A2540;
+  --color-accent: #00C2A2;
+  --color-bg: #F5F7FA;
+  --color-white: #FFFFFF;
+  --color-text: #1B1B1B;
+  --color-muted: #6C757D;
+  --color-border: #CED4DA;
+  --color-warning-bg: #FFF3CD;
+  --color-warning-text: #856404;
+  --color-success-bg: #D1F5EA;
+  --color-success-text: #04785C;
+  --color-danger: #C62828;
+  --color-row-border: #E9ECEF;
+  --color-row-hover: #F1F5FB;
+  --color-soft: #F8FAFC;
+  --white-70: rgba(255, 255, 255, 0.7);
+  --white-15: rgba(255, 255, 255, 0.15);
+  --focus-ring: rgba(11, 94, 215, 0.15);
+  --radius-card: 12px;
+  --radius-input: 8px;
+  --shadow-card: 0 4px 12px rgba(10, 37, 64, 0.08);
+  --shadow-hover: 0 8px 20px rgba(10, 37, 64, 0.12);
+  --font-heading: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--color-text); background: var(--color-bg); }
+h1, h2, h3 { font-family: var(--font-heading); color: var(--color-navy); }
+h1 { font-size: 2.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem; }
+h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem; }
+h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+p { margin-bottom: 1rem; }
+a { color: var(--color-primary); transition: color 0.2s ease; }
+small, .muted { color: var(--color-muted); font-size: 0.875rem; }
+hr { border: none; border-top: 1px solid var(--color-border); margin: 1.5rem 0; }
+pre { font-family: var(--font-body); white-space: pre-wrap; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; }
+main.container { padding-top: 2rem; padding-bottom: 2rem; }
+main section { margin-top: 2rem; }
+
+.navbar { background: var(--color-navy); color: var(--color-white); height: 64px; }
+.navbar__inner { max-width: 1140px; height: 100%; margin: 0 auto; padding: 0 1.5rem;
+                 display: flex; justify-content: space-between; align-items: center; }
+.navbar__brand { display: flex; align-items: center; color: var(--color-white); font-weight: 700; text-decoration: none; }
+.navbar__brand img { height: 40px; }            /* taille du logo */
+.navbar__links { display: flex; gap: 1.5rem; list-style: none; }
+.navbar__links a, header:not(.navbar) a { color: var(--color-white); font-weight: 500; text-decoration: none; }
+.navbar__links a:hover, .navbar__links a.active, header:not(.navbar) a:hover { color: var(--color-accent); }
+
+/* 4. CARTES (bloc commun : fond blanc + coins arrondis + ombre) */
+.carte-activite, .carte-adherent, .detail-card, .about-card, .form-card, .table-responsive, body > form {
+  background: var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
+}
+.grille-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.carte-activite, .carte-adherent { padding: 1.5rem; transition: transform 0.2s ease, box-shadow 0.2s ease; animation: fadeInUp 0.4s ease both; }
+.carte-activite:hover, .carte-adherent:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+.carte-activite h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+.carte-activite p { margin-bottom: 0.5rem; }
+.icone { display: inline-block; font-size: 2.5rem; transition: transform 0.25s ease; }
+.carte-activite:hover .icone { transform: scale(1.15) rotate(-6deg); }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+/* 5. BADGES */
+.badge { display: inline-block; border-radius: 999px; padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: 600; }
+.badge-paye { background: var(--color-success-bg); color: var(--color-success-text); }
+.badge-attente { background: var(--color-warning-bg); color: var(--color-warning-text); }
+
+/* 6. BOUTONS (.btn seul = bouton principal) */
+.btn, input[type="button"] {
+  display: inline-block; border: none; border-radius: var(--radius-input); padding: 0.75rem 1.5rem;
+  font-family: var(--font-body); font-size: 1rem; font-weight: 600; letter-spacing: 0.02em; text-transform: none;
+  text-align: center; text-decoration: none; cursor: pointer;
+  background: var(--color-primary); color: var(--color-white); transition: background 0.2s ease;
+}
+.btn:hover, input[type="button"]:hover, .btn-primary:hover { background: var(--color-primary-dark); color: var(--color-white); }
+.btn-secondary, input[value="Annuler"] { background: transparent; border: 2px solid var(--color-primary); color: var(--color-primary); }
+.btn-secondary:hover, input[value="Annuler"]:hover { background: var(--color-primary); }
+.form-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+
+/* 7. FORMULAIRES (.form-card ou simple <form> dans le body) */
+.form-card, body > form { max-width: 720px; margin: 2rem auto; padding: 2rem; }
+form br { display: none; }
+label { display: block; font-weight: 600; color: var(--color-navy); margin-bottom: 0.5rem; }
+input:not([type="radio"]):not([type="checkbox"]):not([type="button"]), select, textarea {
+  width: 100%; border: 1px solid var(--color-border); border-radius: var(--radius-input);
+  padding: 0.75rem; font-size: 1rem; font-family: var(--font-body); margin-bottom: 1.25rem;
+}
+input[type="radio"], input[type="checkbox"] { margin-right: 0.5rem; accent-color: var(--color-primary); }
+input[readonly] { background: var(--color-bg); color: var(--color-muted); }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--focus-ring); }
+.form-row { display: flex; gap: 1rem; }
+.form-row > * { flex: 1; }
+
+/* 8. TABLEAUX */
+.table-responsive { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; border: 0; background: var(--color-white); }
+th { background: var(--color-navy); color: var(--color-white); text-align: left; padding: 0.75rem 1rem; border: 0; }
+td { padding: 0.75rem 1rem; border: 0; border-bottom: 1px solid var(--color-row-border); }
+tr:hover td { background: var(--color-row-hover); }
+td button { background: transparent; border: 1px solid var(--color-danger); color: var(--color-danger);
+            border-radius: var(--radius-input); padding: 0.25rem 0.75rem; cursor: pointer; }
+td button:hover { background: var(--color-danger); color: var(--color-white); }
+
+/* 9. FICHE DÉTAIL */
+.detail-card { padding: 1.5rem; margin-bottom: 1.5rem; }
+.detail-card h2 { font-size: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+.detail-card p strong { display: inline-block; min-width: 180px; color: var(--color-navy); }
+
+/* 10. SECTION "À PROPOS" */
+.about { padding: 4rem 0; }
+.about-title { text-align: center; margin-bottom: 2rem; }
+.about-card { padding: 2rem; }
+.about-text { line-height: 1.8; text-align: justify; margin-bottom: 1rem; }
+.about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
+.stat-card { background: var(--color-soft); border-radius: var(--radius-card); padding: 1.5rem; text-align: center; }
+.stat-number { color: var(--color-primary); font-size: 2rem; margin-bottom: 0.5rem; }
+.stat-label { color: var(--color-muted); font-weight: 600; }
+.about-action { text-align: center; }
+
+/* 11. PIED DE PAGE (<footer>) */
+.footer, footer { background: var(--color-navy); color: var(--color-white); margin-top: 4rem; padding: 2.5rem 0; text-align: center; }
+footer p { color: var(--white-70); font-size: 0.9rem; margin: 0; }
+footer a { color: var(--white-70); text-decoration: none; font-weight: 600; }
+footer a:hover { color: var(--color-accent); }
+.footer-container { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.5rem; }
+.footer-contact { margin-bottom: 1.5rem; color: var(--white-70); }
+.footer-contact p { margin-bottom: 0.5rem; }
+.footer-bottom { border-top: 1px solid var(--white-15); padding-top: 1rem; }
+
+/* 12. EN-TÊTE SIMPLE (pages sans .navbar, ex : index.html) */
+header:not(.navbar) { background: var(--color-navy); padding: 1.5rem; text-align: center; }
+header:not(.navbar) :is(h1, h2, p) { color: var(--color-white); }
+header:not(.navbar) nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; }
+
+/* 13. SIDEBAR DU BACKOFFICE */
+.backoffice-layout { display: flex; min-height: calc(100vh - 64px); }
+.sidebar { width: 250px; flex-shrink: 0; background: var(--color-navy); color: var(--color-white); padding: 1.5rem 0; }
+.sidebar-brand { padding: 0 1.5rem 1rem; margin-bottom: 1rem; font-size: 1.1rem; font-weight: 700; border-bottom: 1px solid var(--white-15); }
+.sidebar-nav { list-style: none; }
+.sidebar-nav li a { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.5rem; color: var(--white-70);
+                    text-decoration: none; font-weight: 500; transition: color 0.2s ease, background 0.2s ease; }
+.sidebar-nav li a:hover, .sidebar-nav li a.active { background: var(--white-15); color: var(--color-accent); }
+.main-content { flex: 1; padding: 2rem; background: var(--color-bg); }
+.main-content .container { max-width: none; padding: 0; }
+
+/* 14. RESPONSIVE (à garder à la fin) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .grille-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .backoffice-layout { flex-direction: column; }
+  .backoffice-layout .sidebar { width: 100%; padding: 1rem 0; }
+  .backoffice-layout .sidebar .sidebar-nav { display: flex; flex-wrap: wrap; }
+  .backoffice-layout .sidebar .sidebar-nav li a { padding: 0.5rem 1rem; }
+  .backoffice-layout .main-content { padding: 1.5rem; }
+  .about-stats { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .navbar { height: auto; }
+  .navbar__inner { flex-direction: column; padding: 0.5rem 1.5rem; }
+  .navbar__links { flex-direction: column; align-items: center; gap: 0.75rem; }
+  .grille-cards { grid-template-columns: 1fr; }
+  .form-row { flex-direction: column; }
+  .footer-links { flex-direction: column; gap: 0.5rem; }
+  .detail-card p strong { display: block; }
+}
